@@ -104,5 +104,21 @@ public final class UserDefaultsStorage: StorageProtocol {
     public func exists(forKey key: String) -> Bool {
         return userDefaults.object(forKey: key) != nil
     }
+    
+    /// 저장된 모든 키 목록 조회
+    /// - Returns: 저장된 키 배열 (시스템 키 제외)
+    public func getAllKeys() -> [String] {
+        let dict = userDefaults.dictionaryRepresentation()
+        var keys: [String] = []
+        
+        for (key, _) in dict {
+            // 시스템 키 제외 (Apple, NS, AK로 시작하는 키들)
+            if !key.hasPrefix("Apple") && !key.hasPrefix("NS") && !key.hasPrefix("AK") {
+                keys.append(key)
+            }
+        }
+        
+        return keys.sorted()
+    }
 }
 

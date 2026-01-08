@@ -1,7 +1,6 @@
 import Foundation
 import Combine
 import Locker
-import Security
 
 class KeychainViewModel: ObservableObject {
     @Published var keychainKeys: [String] = []
@@ -15,50 +14,20 @@ class KeychainViewModel: ObservableObject {
     private var keychainValues: [String: String] = [:]
     
     func refreshKeys() {
-        // Keychain에서 모든 키 가져오기
-        let query: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecReturnAttributes as String: true,
-            kSecMatchLimit as String: kSecMatchLimitAll
-        ]
+        // StorageManager를 사용하여 모든 키 가져오기
+        let keys = storage.getAllSecureKeys()
+        var values: [String: String] = [:]
         
-        var result: AnyObject?
-        let status = SecItemCopyMatching(query as CFDictionary, &result)
+        // 각 키의 값도 가져오기
+        for key in keys {
+            if let value: String = try? storage.loadSecure(forKey: key) {
+                values[key] = value
+            }
+        }
         
-        if status == errSecSuccess, let items = result as? [[String: Any]] {
-            var keys: [String] = []
-            var values: [String: String] = [:]
-            
-            for item in items {
-                // kSecAttrAccount는 String 또는 Data로 나올 수 있음
-                let key: String?
-                if let keyString = item[kSecAttrAccount as String] as? String {
-                    key = keyString
-                } else if let keyData = item[kSecAttrAccount as String] as? Data {
-                    key = String(data: keyData, encoding: .utf8)
-                } else {
-                    key = nil
-                }
-                
-                if let key = key {
-                    keys.append(key)
-                    
-                    // 값도 가져오기
-                    if let value: String = try? storage.loadSecure(forKey: key) {
-                        values[key] = value
-                    }
-                }
-            }
-            
-            DispatchQueue.main.async {
-                self.keychainKeys = keys.sorted()
-                self.keychainValues = values
-            }
-        } else {
-            DispatchQueue.main.async {
-                self.keychainKeys = []
-                self.keychainValues = [:]
-            }
+        DispatchQueue.main.async {
+            self.keychainKeys = keys
+            self.keychainValues = values
         }
     }
     

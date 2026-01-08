@@ -163,5 +163,31 @@ public final class StorageManager {
         try userDefaultsStorage.deleteBatch(keys: keys)
         StorageLogger.shared.log("UserDefaults에서 \(keys.count)개 키 삭제됨: \(keys.joined(separator: ", "))")
     }
+    
+    // MARK: - 키 목록 조회
+    
+    /// Keychain에 저장된 모든 키 목록 조회
+    /// - Returns: 저장된 키 배열
+    ///
+    /// 사용 예시:
+    /// ```swift
+    /// let keys = StorageManager.shared.getAllSecureKeys()
+    /// print("저장된 Keychain 키: \(keys)")
+    /// ```
+    public func getAllSecureKeys() -> [String] {
+        return keychainStorage.getAllKeys()
+    }
+    
+    /// UserDefaults에 저장된 모든 키 목록 조회
+    /// - Returns: 저장된 키 배열 (시스템 키 제외)
+    ///
+    /// 사용 예시:
+    /// ```swift
+    /// let keys = StorageManager.shared.getAllKeys()
+    /// print("저장된 UserDefaults 키: \(keys)")
+    /// ```
+    public func getAllKeys() -> [String] {
+        return userDefaultsStorage.getAllKeys()
+    }
 }
 

@@ -15,16 +15,13 @@ class UserDefaultsViewModel: ObservableObject {
     private var userDefaultsValues: [String: String] = [:]
     
     func refreshKeys() {
-        // UserDefaults에서 모든 키 가져오기
-        let dict = userDefaults.dictionaryRepresentation()
-        var keys: [String] = []
+        // StorageManager를 사용하여 모든 키 가져오기
+        let keys = storage.getAllKeys()
         var values: [String: String] = [:]
         
-        for (key, value) in dict {
-            // 시스템 키 제외 (Apple~ 시작하는 키들)
-            if !key.hasPrefix("Apple") && !key.hasPrefix("NS") && !key.hasPrefix("AK") {
-                keys.append(key)
-                
+        // 각 키의 값도 가져오기
+        for key in keys {
+            if let value = userDefaults.object(forKey: key) {
                 // 값을 문자열로 변환
                 if let stringValue = value as? String {
                     values[key] = stringValue
@@ -37,7 +34,7 @@ class UserDefaultsViewModel: ObservableObject {
         }
         
         DispatchQueue.main.async {
-            self.userDefaultsKeys = keys.sorted()
+            self.userDefaultsKeys = keys
             self.userDefaultsValues = values
         }
     }

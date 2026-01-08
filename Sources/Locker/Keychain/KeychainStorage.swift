@@ -123,6 +123,43 @@ public final class KeychainStorage: StorageProtocol {
         return status == errSecSuccess
     }
     
+    /// 저장된 모든 키 목록 조회
+    /// - Returns: 저장된 키 배열
+    public func getAllKeys() -> [String] {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: service,
+            kSecReturnAttributes as String: true,
+            kSecMatchLimit as String: kSecMatchLimitAll
+        ]
+        
+        var result: AnyObject?
+        let status = SecItemCopyMatching(query as CFDictionary, &result)
+        
+        guard status == errSecSuccess, let items = result as? [[String: Any]] else {
+            return []
+        }
+        
+        var keys: [String] = []
+        for item in items {
+            // kSecAttrAccount는 String 또는 Data로 나올 수 있음
+            let key: String?
+            if let keyString = item[kSecAttrAccount as String] as? String {
+                key = keyString
+            } else if let keyData = item[kSecAttrAccount as String] as? Data {
+                key = String(data: keyData, encoding: .utf8)
+            } else {
+                key = nil
+            }
+            
+            if let key = key {
+                keys.append(key)
+            }
+        }
+        
+        return keys.sorted()
+    }
+    
     // MARK: - Private Methods
     
     private func buildQuery(forKey key: String) -> [String: Any] {
