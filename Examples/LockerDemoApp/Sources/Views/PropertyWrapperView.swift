@@ -113,11 +113,57 @@ struct PropertyWrapperView: View {
                     .font(.caption)
                 }
                 
-                Section(header: Text("액션")) {
-                    Button("모든 설정 초기화") {
-                        viewModel.resetAllSettings()
+                Section(header: Text("초기화 방법 비교")) {
+                    VStack(alignment: .leading, spacing: 12) {
+                        // 방법 1: 프로퍼티 래퍼 (개별 삭제)
+                        Button(action: {
+                            viewModel.resetUsingPropertyWrappers()
+                        }) {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("방법 1: 프로퍼티 래퍼 사용")
+                                    .font(.headline)
+                                Text("각 프로퍼티를 nil 또는 기본값으로 설정")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        .foregroundColor(.orange)
+                        
+                        Divider()
+                        
+                        // 방법 2: StorageManager (배치 삭제) - 권장
+                        Button(action: {
+                            viewModel.resetUsingStorageManager()
+                        }) {
+                            VStack(alignment: .leading, spacing: 4) {
+                                HStack {
+                                    Text("방법 2: StorageManager 배치 삭제")
+                                        .font(.headline)
+                                    Text("⭐")
+                                }
+                                Text("deleteBatch()로 여러 키를 한번에 삭제 (권장)")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        .foregroundColor(.blue)
+                        
+                        Divider()
+                        
+                        // 방법 3: StorageManager (전체 삭제) - 주의
+                        Button(action: {
+                            viewModel.resetEverythingUsingStorageManager()
+                        }) {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("방법 3: 전체 삭제 (주의!)")
+                                    .font(.headline)
+                                Text("deleteAllSecure() + deleteAll() - 모든 데이터 삭제")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        .foregroundColor(.red)
                     }
-                    .foregroundColor(.red)
                 }
                 
                 Section(header: Text("💡 사용 방법")) {
@@ -126,6 +172,45 @@ struct PropertyWrapperView: View {
                         Text("2. 앱을 종료하고 다시 실행해도 값이 유지됩니다")
                         Text("3. @Keychain: 민감한 정보 (토큰, 비밀번호)")
                         Text("4. @UserDefault: 일반 설정 (테마, 폰트 등)")
+                    }
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                }
+                
+                Section(header: Text("🔍 삭제 방법 비교")) {
+                    VStack(alignment: .leading, spacing: 12) {
+                        Group {
+                            Text("방법 1: 프로퍼티 래퍼")
+                                .font(.headline)
+                            Text("• 각 프로퍼티를 개별적으로 nil 또는 기본값 설정")
+                            Text("• 간단하지만 프로퍼티가 많으면 번거로움")
+                            Text("• 예: token = nil")
+                        }
+                        
+                        Divider()
+                        
+                        Group {
+                            HStack {
+                                Text("방법 2: StorageManager 배치 삭제")
+                                    .font(.headline)
+                                Text("⭐ 권장")
+                                    .font(.caption)
+                                    .foregroundColor(.blue)
+                            }
+                            Text("• deleteBatch()로 여러 키를 한번에 삭제")
+                            Text("• 효율적이고 명시적")
+                            Text("• 로그아웃 시나리오에 최적")
+                        }
+                        
+                        Divider()
+                        
+                        Group {
+                            Text("방법 3: 전체 삭제")
+                                .font(.headline)
+                            Text("• deleteAllSecure() / deleteAll()")
+                            Text("• 모든 데이터를 삭제 (주의 필요)")
+                            Text("• 계정 삭제, 앱 초기화 시 사용")
+                        }
                     }
                     .font(.caption)
                     .foregroundColor(.secondary)

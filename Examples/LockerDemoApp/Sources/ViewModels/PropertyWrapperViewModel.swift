@@ -3,6 +3,10 @@ import Combine
 import Locker
 
 class PropertyWrapperViewModel: ObservableObject {
+    // MARK: - Storage Manager
+    
+    private let storage = StorageManager.shared
+    
     // MARK: - Keychain Property Wrappers (민감 정보)
     
     @Keychain(key: "demo.accessToken", accessibility: .afterFirstUnlock)
@@ -62,7 +66,12 @@ class PropertyWrapperViewModel: ObservableObject {
         accessToken = nil
     }
     
-    func resetAllSettings() {
+    // MARK: - 프로퍼티 래퍼 방식 (개별 삭제)
+    
+    func resetUsingPropertyWrappers() {
+        // 프로퍼티 래퍼를 사용한 개별 삭제
+        // 각 프로퍼티를 하나씩 nil 또는 기본값으로 설정
+        
         // Keychain 데이터 삭제
         accessToken = nil
         password = nil
@@ -75,6 +84,55 @@ class PropertyWrapperViewModel: ObservableObject {
         username = ""
         email = ""
         loginCount = 0
+    }
+    
+    // MARK: - StorageManager 방식 (배치 삭제) ⭐
+    
+    func resetUsingStorageManager() {
+        do {
+            // 방법 1: 선택적 배치 삭제 (권장)
+            // Keychain에서 특정 키들만 삭제
+            try storage.deleteSecureBatch(keys: [
+                "demo.accessToken",
+                "demo.password"
+            ])
+            
+            // UserDefaults에서 특정 키들만 삭제
+            try storage.deleteBatch(keys: [
+                "demo.isDarkMode",
+                "demo.fontSize",
+                "demo.theme",
+                "demo.notificationsEnabled",
+                "demo.username",
+                "demo.email",
+                "demo.loginCount"
+            ])
+            
+            // 프로퍼티 래퍼의 캐시된 값도 초기화
+            objectWillChange.send()
+            
+            print("✅ StorageManager 배치 삭제 완료")
+        } catch {
+            print("❌ 삭제 실패: \(error)")
+        }
+    }
+    
+    func resetEverythingUsingStorageManager() {
+        do {
+            // 방법 2: 전체 삭제 (주의!)
+            // 모든 Keychain 데이터 삭제
+            try storage.deleteAllSecure()
+            
+            // 모든 UserDefaults 데이터 삭제
+            try storage.deleteAll()
+            
+            // 프로퍼티 래퍼의 캐시된 값도 초기화
+            objectWillChange.send()
+            
+            print("✅ 전체 삭제 완료")
+        } catch {
+            print("❌ 전체 삭제 실패: \(error)")
+        }
     }
 }
 
