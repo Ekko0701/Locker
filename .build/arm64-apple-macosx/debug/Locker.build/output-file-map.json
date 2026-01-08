@@ -1,0 +1,96 @@
+{
+  "": {
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/master.swiftdeps"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageConfiguration.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageConfiguration.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageConfiguration.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageConfiguration~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageConfiguration.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageConfiguration.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageError.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageError.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageError.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageError~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageError.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageError.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageManager.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageManager.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageManager.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageManager.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageManager.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageProtocol.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Extensions/Codable+Storage.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/Codable+Storage.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/Codable+Storage.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/Codable+Storage~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/Codable+Storage.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/Codable+Storage.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Extensions/StorageProtocol+Batch.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol+Batch.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol+Batch.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol+Batch~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol+Batch.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol+Batch.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Keychain/KeychainAccessibility.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainAccessibility.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainAccessibility.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainAccessibility~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainAccessibility.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainAccessibility.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Keychain/KeychainStorage.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainStorage.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainStorage.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainStorage~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainStorage.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainStorage.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsKey.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsKey.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsKey.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsKey~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsKey.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsKey.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsStorage.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsStorage.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsStorage.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsStorage~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsStorage.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsStorage.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsWrapper.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsWrapper.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsWrapper.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsWrapper~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsWrapper.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsWrapper.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Utilities/StorageLogger.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageLogger.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageLogger.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageLogger~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageLogger.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageLogger.dia"
+  },
+  "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Utilities/StorageMigration.swift": {
+    "dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageMigration.d",
+    "object": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageMigration.swift.o",
+    "swiftmodule": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageMigration~partial.swiftmodule",
+    "swift-dependencies": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageMigration.swiftdeps",
+    "diagnostics": "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageMigration.dia"
+  }
+}

@@ -1,0 +1,923 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.xctest/Contents/MacOS/LockerPackageTests",
+      "packagePath" : "/Users/kimdongjoo/Desktop/Locker",
+      "productName" : "LockerPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.Locker-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/sources",
+      "importPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageConfiguration.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageProtocol.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Extensions/Codable+Storage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Extensions/StorageProtocol+Batch.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Keychain/KeychainAccessibility.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Keychain/KeychainStorage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsKey.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsStorage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsWrapper.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Utilities/StorageLogger.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Utilities/StorageMigration.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Locker",
+      "moduleOutputPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules/Locker.swiftmodule",
+      "objects" : [
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageConfiguration.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageError.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageManager.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/Codable+Storage.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol+Batch.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainAccessibility.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainStorage.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsKey.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsStorage.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsWrapper.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageLogger.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageMigration.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/include/Locker-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "locker"
+      ],
+      "outputFileMapPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageConfiguration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/Codable+Storage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol+Batch.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainAccessibility.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainStorage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsKey.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsStorage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsWrapper.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageLogger.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageMigration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules/Locker.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageConfiguration.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageError.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageManager.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageProtocol.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Extensions/Codable+Storage.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Extensions/StorageProtocol+Batch.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Keychain/KeychainAccessibility.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Keychain/KeychainStorage.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsKey.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsStorage.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsWrapper.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Utilities/StorageLogger.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Utilities/StorageMigration.swift"
+      ],
+      "tempsPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.LockerPackageTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.build/sources",
+      "importPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules/LockerTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "LockerPackageTests",
+      "moduleOutputPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules/LockerPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.build/include/LockerPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "locker"
+      ],
+      "outputFileMapPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules/LockerPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.LockerTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/sources",
+      "importPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/KeychainStorageTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/StorageManagerTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/StorageMigrationTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/UserDefaultsStorageTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules/Locker.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "LockerTests",
+      "moduleOutputPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules/LockerTests.swiftmodule",
+      "objects" : [
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/KeychainStorageTests.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/StorageManagerTests.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/StorageMigrationTests.swift.o",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/UserDefaultsStorageTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "locker"
+      ],
+      "outputFileMapPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/KeychainStorageTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/StorageManagerTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/StorageMigrationTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/UserDefaultsStorageTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules/LockerTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/KeychainStorageTests.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/StorageManagerTests.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/StorageMigrationTests.swift",
+        "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/UserDefaultsStorageTests.swift"
+      ],
+      "tempsPath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "Locker" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "Locker",
+      "-package-name",
+      "locker",
+      "-c",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageConfiguration.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageError.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageManager.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageProtocol.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Extensions/Codable+Storage.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Extensions/StorageProtocol+Batch.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Keychain/KeychainAccessibility.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Keychain/KeychainStorage.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsKey.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsStorage.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsWrapper.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Utilities/StorageLogger.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Utilities/StorageMigration.swift",
+      "-I",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/include/Locker-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "locker",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "LockerPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "LockerPackageTests",
+      "-package-name",
+      "locker",
+      "-c",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.build/include/LockerPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "locker",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "LockerTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "LockerTests",
+      "-package-name",
+      "locker",
+      "-c",
+      "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/KeychainStorageTests.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/StorageManagerTests.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/StorageMigrationTests.swift",
+      "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/UserDefaultsStorageTests.swift",
+      "-I",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "locker",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "Locker" : [
+
+    ],
+    "LockerPackageTests" : [
+      "LockerTests",
+      "Locker"
+    ],
+    "LockerTests" : [
+      "Locker"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageConfiguration.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Core/StorageProtocol.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Extensions/Codable+Storage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Extensions/StorageProtocol+Batch.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Keychain/KeychainAccessibility.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Keychain/KeychainStorage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsKey.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsStorage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/UserDefaults/UserDefaultsWrapper.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Utilities/StorageLogger.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Sources/Locker/Utilities/StorageMigration.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/sources"
+    },
+    "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.build/sources"
+    },
+    "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/Codable+Storage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainAccessibility.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/KeychainStorage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageConfiguration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageLogger.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageMigration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol+Batch.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/StorageProtocol.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsKey.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsStorage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/Locker.build/UserDefaultsWrapper.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/KeychainStorageTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/StorageManagerTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/StorageMigrationTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/UserDefaultsStorageTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/KeychainStorageTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/StorageManagerTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/StorageMigrationTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kimdongjoo/Desktop/Locker/Tests/LockerTests/UserDefaultsStorageTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/LockerTests.build/sources"
+    },
+    "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/kimdongjoo/Desktop/Locker/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}
