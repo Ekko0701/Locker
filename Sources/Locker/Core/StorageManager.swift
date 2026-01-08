@@ -127,5 +127,41 @@ public final class StorageManager {
         try userDefaultsStorage.deleteAll()
         StorageLogger.shared.log("모든 UserDefaults 데이터 삭제됨")
     }
+    
+    // MARK: - 배치 삭제
+    
+    /// 여러 Keychain 키를 한번에 삭제
+    /// - Parameter keys: 삭제할 키 배열
+    /// - Throws: StorageError
+    ///
+    /// 사용 예시:
+    /// ```swift
+    /// try StorageManager.shared.deleteSecureBatch(keys: [
+    ///     "auth.accessToken",
+    ///     "auth.refreshToken",
+    ///     "user.sessionKey"
+    /// ])
+    /// ```
+    public func deleteSecureBatch(keys: [String]) throws {
+        try keychainStorage.deleteBatch(keys: keys)
+        StorageLogger.shared.log("Keychain에서 \(keys.count)개 키 삭제됨: \(keys.joined(separator: ", "))")
+    }
+    
+    /// 여러 UserDefaults 키를 한번에 삭제
+    /// - Parameter keys: 삭제할 키 배열
+    /// - Throws: StorageError
+    ///
+    /// 사용 예시:
+    /// ```swift
+    /// try StorageManager.shared.deleteBatch(keys: [
+    ///     "user.preferences",
+    ///     "app.settings",
+    ///     "cache.data"
+    /// ])
+    /// ```
+    public func deleteBatch(keys: [String]) throws {
+        try userDefaultsStorage.deleteBatch(keys: keys)
+        StorageLogger.shared.log("UserDefaults에서 \(keys.count)개 키 삭제됨: \(keys.joined(separator: ", "))")
+    }
 }
 

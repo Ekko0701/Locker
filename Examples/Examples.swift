@@ -186,6 +186,96 @@ func batchOperationsExample() {
     }
 }
 
+// MARK: - 선택적 배치 삭제 (실전 예시)
+
+func selectiveBatchDeleteExample() {
+    do {
+        // 시나리오 1: 로그아웃 시 인증 정보만 삭제 (설정은 유지)
+        try StorageManager.shared.deleteSecureBatch(keys: [
+            "auth.accessToken",
+            "auth.refreshToken",
+            "user.encryptionKey",
+            "user.sessionKey"
+        ])
+        // darkMode, fontSize 같은 설정은 유지됨!
+        
+        // 시나리오 2: 캐시 데이터만 삭제
+        try StorageManager.shared.deleteBatch(keys: [
+            "cache.images",
+            "cache.responses",
+            "cache.temp",
+            "cache.downloaded"
+        ])
+        // 사용자 설정과 인증 정보는 유지됨!
+        
+        // 시나리오 3: 특정 사용자의 데이터만 삭제
+        try StorageManager.shared.deleteBatch(keys: [
+            "user.profile",
+            "user.preferences",
+            "user.history"
+        ])
+        
+        print("선택적 배치 삭제 완료")
+    } catch {
+        print("Batch Delete Error: \(error)")
+    }
+}
+
+// MARK: - 실전: 로그아웃 vs 전체 초기화
+
+class DataManager {
+    private let storage = StorageManager.shared
+    
+    // 로그아웃: 인증 정보만 삭제 (설정 유지)
+    func logout() {
+        do {
+            try storage.deleteSecureBatch(keys: [
+                "auth.accessToken",
+                "auth.refreshToken",
+                "user.encryptionKey"
+            ])
+            
+            try storage.deleteBatch(keys: [
+                "user.sessionId",
+                "user.lastActivity"
+            ])
+            
+            print("✅ 로그아웃 완료 - 앱 설정은 유지됨")
+        } catch {
+            print("❌ 로그아웃 실패: \(error)")
+        }
+    }
+    
+    // 앱 초기화: 모든 데이터 삭제
+    func resetApp() {
+        do {
+            try storage.deleteAllSecure()  // 모든 Keychain
+            try storage.deleteAll()        // 모든 UserDefaults
+            
+            print("✅ 앱 완전 초기화 완료")
+        } catch {
+            print("❌ 초기화 실패: \(error)")
+        }
+    }
+    
+    // 캐시만 삭제
+    func clearCache() {
+        do {
+            try storage.deleteBatch(keys: [
+                "cache.images",
+                "cache.videos",
+                "cache.documents",
+                "cache.temp"
+            ])
+            
+            print("✅ 캐시 삭제 완료")
+        } catch {
+            print("❌ 캐시 삭제 실패: \(error)")
+        }
+    }
+}
+
+
 // MARK: - 에러 핸들링
 
 func errorHandlingExample() {

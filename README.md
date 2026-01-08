@@ -205,6 +205,69 @@ let values: [String: String?] = try storage.loadBatch(keys: ["key1", "key2", "ke
 try storage.deleteBatch(keys: ["key1", "key2", "key3"])
 ```
 
+### 배치 삭제 (StorageManager)
+
+로그아웃이나 특정 상황에서 여러 키를 선택적으로 삭제:
+
+```swift
+// Keychain에서 특정 키들만 삭제 (예: 로그아웃 시 토큰만 삭제)
+try StorageManager.shared.deleteSecureBatch(keys: [
+    "auth.accessToken",
+    "auth.refreshToken",
+    "user.sessionKey"
+])
+// darkMode 같은 설정은 유지됨
+
+// UserDefaults에서 특정 키들만 삭제
+try StorageManager.shared.deleteBatch(keys: [
+    "cache.data",
+    "temp.session",
+    "user.lastActivity"
+])
+```
+
+#### 실전 예시
+
+```swift
+class AuthManager {
+    @Keychain(key: "auth.accessToken")
+    private var accessToken: String?
+    
+    @Keychain(key: "auth.refreshToken")
+    private var refreshToken: String?
+    
+    @Keychain(key: "user.encryptionKey")
+    private var encryptionKey: String?
+    
+    @UserDefault(key: "app.darkMode", defaultValue: false)
+    var darkMode: Bool
+    
+    @UserDefault(key: "user.rememberMe", defaultValue: false)
+    var rememberMe: Bool
+    
+    func logout() {
+        // 인증 관련 키만 삭제 (설정은 유지)
+        try? StorageManager.shared.deleteSecureBatch(keys: [
+            "auth.accessToken",
+            "auth.refreshToken",
+            "user.encryptionKey"
+        ])
+        
+        // darkMode는 유지됨!
+        print("다크모드 설정 유지: \(darkMode)")
+    }
+    
+    func clearCache() {
+        // 캐시 데이터만 삭제
+        try? StorageManager.shared.deleteBatch(keys: [
+            "cache.images",
+            "cache.responses",
+            "cache.temp"
+        ])
+    }
+}
+```
+
 ### 마이그레이션
 
 ```swift
