@@ -12,6 +12,13 @@ import Locker
 class AuthenticationViewModel: ObservableObject {
     private let storage = StorageManager.shared
     
+    // 프로퍼티 래퍼를 사용한 간편한 Keychain 관리
+    @Keychain(key: "auth.accessToken")
+    private var storedAccessToken: String?
+    
+    @Keychain(key: "auth.refreshToken")
+    private var storedRefreshToken: String?
+    
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var isLoggedIn: Bool = false
@@ -36,9 +43,9 @@ class AuthenticationViewModel: ObservableObject {
         let fakeRefreshToken = "refresh_\(UUID().uuidString)"
         
         do {
-            // Keychain에 토큰 저장
-            try storage.saveSecure(fakeAccessToken, forKey: "auth.accessToken")
-            try storage.saveSecure(fakeRefreshToken, forKey: "auth.refreshToken")
+            // 프로퍼티 래퍼 사용 - 자동으로 Keychain에 저장됨
+            storedAccessToken = fakeAccessToken
+            storedRefreshToken = fakeRefreshToken
             
             // UserDefaults에 사용자 정보 저장
             try storage.save(email, forKey: "auth.email")
@@ -67,9 +74,9 @@ class AuthenticationViewModel: ObservableObject {
     
     func logout() {
         do {
-            // Keychain에서 토큰 삭제
-            try storage.deleteSecure(forKey: "auth.accessToken")
-            try storage.deleteSecure(forKey: "auth.refreshToken")
+            // 프로퍼티 래퍼 사용 - nil 할당 시 자동으로 Keychain에서 삭제
+            storedAccessToken = nil
+            storedRefreshToken = nil
             
             // UserDefaults에서 사용자 정보 삭제
             try storage.delete(forKey: "auth.email")
@@ -95,8 +102,10 @@ class AuthenticationViewModel: ObservableObject {
             if isLoggedIn {
                 userEmail = try storage.load(forKey: "auth.email")
                 lastLoginDate = try storage.load(forKey: "auth.lastLoginDate")
-                accessToken = try storage.loadSecure(forKey: "auth.accessToken")
-                refreshToken = try storage.loadSecure(forKey: "auth.refreshToken")
+                
+                // 프로퍼티 래퍼 사용 - 자동으로 Keychain에서 로드
+                accessToken = storedAccessToken
+                refreshToken = storedRefreshToken
             }
         } catch {
             errorMessage = "상태 확인 실패: \(error.localizedDescription)"

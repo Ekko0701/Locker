@@ -95,6 +95,8 @@ if let loadedProfile: UserProfile = try StorageManager.shared.load(forKey: "user
 
 ### PropertyWrapper 사용
 
+#### UserDefaults
+
 ```swift
 import Locker
 
@@ -113,6 +115,29 @@ class AppSettings {
 let settings = AppSettings()
 settings.isDarkMode = true  // 자동으로 저장
 print(settings.isDarkMode)  // 자동으로 로드
+```
+
+#### Keychain
+
+```swift
+import Locker
+
+class AuthManager {
+    @Keychain(key: "accessToken")
+    var accessToken: String?
+    
+    @Keychain(key: "refreshToken")
+    var refreshToken: String?
+    
+    @Keychain(key: "password", accessibility: .whenUnlockedThisDeviceOnly)
+    var password: String?
+}
+
+// 사용
+let auth = AuthManager()
+auth.accessToken = "eyJhbGciOiJIUzI1NiIs..."  // 자동으로 Keychain에 저장
+print(auth.accessToken)  // 자동으로 Keychain에서 로드
+auth.accessToken = nil  // 자동으로 Keychain에서 삭제
 ```
 
 ---

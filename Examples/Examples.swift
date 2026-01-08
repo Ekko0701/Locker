@@ -85,6 +85,40 @@ func propertyWrapperExample() {
     print("Notifications: \(settings.notificationsEnabled)")
 }
 
+// MARK: - Keychain PropertyWrapper 사용
+
+class SecureStorage {
+    @Keychain(key: "accessToken")
+    var accessToken: String?
+    
+    @Keychain(key: "refreshToken")
+    var refreshToken: String?
+    
+    @Keychain(key: "password", accessibility: .whenUnlockedThisDeviceOnly)
+    var password: String?
+    
+    @Keychain(key: "biometricToken", accessibility: .whenPasscodeSetThisDeviceOnly)
+    var biometricToken: String?
+}
+
+func keychainPropertyWrapperExample() {
+    let storage = SecureStorage()
+    
+    // 자동으로 Keychain에 저장됨
+    storage.accessToken = "eyJhbGciOiJIUzI1NiIs..."
+    storage.refreshToken = "refresh_token_here"
+    storage.password = "MySecretPassword123"
+    
+    // 자동으로 Keychain에서 로드됨
+    if let token = storage.accessToken {
+        print("Access Token: \(token)")
+    }
+    
+    // nil 할당 시 자동으로 Keychain에서 삭제됨
+    storage.accessToken = nil
+    print("Access Token Deleted: \(storage.accessToken == nil)")
+}
+
 // MARK: - App Groups 사용
 
 func appGroupsExample() {
