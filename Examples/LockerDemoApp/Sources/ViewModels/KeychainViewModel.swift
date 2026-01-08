@@ -30,8 +30,17 @@ class KeychainViewModel: ObservableObject {
             var values: [String: String] = [:]
             
             for item in items {
-                if let keyData = item[kSecAttrAccount as String] as? Data,
-                   let key = String(data: keyData, encoding: .utf8) {
+                // kSecAttrAccount는 String 또는 Data로 나올 수 있음
+                let key: String?
+                if let keyString = item[kSecAttrAccount as String] as? String {
+                    key = keyString
+                } else if let keyData = item[kSecAttrAccount as String] as? Data {
+                    key = String(data: keyData, encoding: .utf8)
+                } else {
+                    key = nil
+                }
+                
+                if let key = key {
                     keys.append(key)
                     
                     // 값도 가져오기

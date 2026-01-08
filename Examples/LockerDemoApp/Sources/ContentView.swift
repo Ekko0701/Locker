@@ -17,6 +17,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("UserDefaults", systemImage: "gearshape.fill")
                 }
+            
+            PropertyWrapperView()
+                .tabItem {
+                    Label("프로퍼티 래퍼", systemImage: "wand.and.stars")
+                }
         }
     }
 }
