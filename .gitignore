@@ -46,6 +46,8 @@ playground.xcworkspace
 # hence it is not needed unless you have added a package configuration file to your project
 # .swiftpm
 
+.build/
+.swiftpm/
 .swiftpm/config/registries.json
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
@@ -99,4 +101,12 @@ iOSInjectionProject/
 
 # Documentation (내부 문서는 제외)
 Documents/
+
+# Tuist (Example App)
+# Tuist가 생성하는 파일들은 제외하고 소스 코드만 커밋
+Examples/LockerExampleApp/.tuist/
+Examples/LockerExampleApp/Derived/
+Examples/LockerExampleApp/*.xcodeproj
+Examples/LockerExampleApp/*.xcworkspace
+Examples/LockerExampleApp/xcuserdata/
 
