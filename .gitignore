@@ -110,3 +110,10 @@ Examples/LockerExampleApp/*.xcodeproj
 Examples/LockerExampleApp/*.xcworkspace
 Examples/LockerExampleApp/xcuserdata/
 
+# Tuist (Demo App)
+Examples/LockerDemoApp/.tuist/
+Examples/LockerDemoApp/Derived/
+Examples/LockerDemoApp/*.xcodeproj
+Examples/LockerDemoApp/*.xcworkspace
+Examples/LockerDemoApp/xcuserdata/
+
